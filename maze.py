@@ -8,7 +8,9 @@ Excercises
 """
 
 from random import random
-from turtle import *
+from turtle import color, width, update, up, down
+from turtle import goto, dot, setup, hideturtle
+from turtle import tracer, onscreenclick, done
 
 from freegames import line
 
@@ -27,26 +29,6 @@ def draw():
 
     update()
 
-
-def tap(x, y):
-    """Draw line and dot for screen tap."""
-    if abs(x) > 198 or abs(y) > 198:
-        up()
-    else:
-        down()
-
-    width(2)
-    color('red')
-    goto(x, y)
-    dot(4)
-
-
-setup(420, 420, 370, 0)
-hideturtle()
-tracer(False)
-draw()
-onscreenclick(tap)
-done()
 
 def tap(x, y):
     """Draw line and dot for screen tap."""
